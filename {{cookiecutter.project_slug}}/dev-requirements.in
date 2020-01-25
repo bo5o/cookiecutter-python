@@ -1,0 +1,20 @@
+-c requirements.txt
+
+# REPL
+ipython
+ipdb
+
+# Code style
+black
+isort
+
+# Linting
+flake8
+flake8-bugbear
+flake8-logging-format
+mypy
+pydocstyle
+
+# Testing
+pytest
+pytest-sugar
