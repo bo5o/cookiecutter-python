@@ -1,4 +1,4 @@
-.PHONY: major minor patch sync init clean
+.PHONY: major minor patch sync init clean docs
 
 # Formatting
 BOLD := \033[1m
