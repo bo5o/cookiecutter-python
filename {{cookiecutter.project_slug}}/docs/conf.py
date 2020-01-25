@@ -30,6 +30,7 @@ release = {{ cookiecutter.project_slug }}.__version__
 version = {{ cookiecutter.project_slug }}.__version__
 
 # -- General configuration ---------------------------------------------------
+import sphinx_rtd_theme  # noqa # isort:skip
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
