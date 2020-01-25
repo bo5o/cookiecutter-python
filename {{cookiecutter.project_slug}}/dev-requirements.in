@@ -12,9 +12,15 @@ isort
 flake8
 flake8-bugbear
 flake8-logging-format
-mypy
 pydocstyle
+
+# Type checking
+mypy
 
 # Testing
 pytest
 pytest-sugar
+
+# Documentation
+sphinx
+sphinx-rtd-theme

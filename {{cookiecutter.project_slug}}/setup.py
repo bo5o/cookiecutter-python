@@ -22,6 +22,7 @@ setup(
     description="{{ cookiecutter.project_short_description }}",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
+    author="{{ cookiecutter.author_name }}",
     packages=find_packages(),
     python_requires=">=3.6",
     zip_safe=False,

@@ -54,6 +54,20 @@ clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
 
+## Delete all mypy caches
+clean-mypy:
+	find . -maxdepth 1 -type d -name ".mypy_cache" -print0 | xargs -0 rm -rf
+
+## Build Sphinx HTML documentation, including API reference
+docs:
+	@echo "$(BOLD)Generating API reference...$(RESET)"
+	@rm -f docs/{{ cookiecutter.project_slug }}.rst
+	@rm -f docs/modules.rst
+	@$(VIRTUAL_ENV)/bin/sphinx-apidoc -o docs/ -H "API Reference" {{ cookiecutter.project_slug }}
+	@echo "$(BOLD)Building HTML documentation...$(RESET)"
+	@$(MAKE) -C docs clean
+	@$(MAKE) -C docs html
+
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################
