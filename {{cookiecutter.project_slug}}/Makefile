@@ -58,7 +58,7 @@ clean:
 clean-mypy:
 	find . -maxdepth 1 -type d -name ".mypy_cache" -print0 | xargs -0 rm -rf
 
-## Build Sphinx HTML documentation, including API reference
+## Build Sphinx HTML documentation (incl. API reference)
 docs:
 	@echo "$(BOLD)Generating API reference...$(RESET)"
 	@rm -f docs/{{ cookiecutter.project_slug }}.rst
