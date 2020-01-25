@@ -1,4 +1,4 @@
-.PHONY: major minor patch sync init clean docs
+.PHONY: major minor patch sync init clean clean-mypy docs
 
 # Formatting
 BOLD := \033[1m
