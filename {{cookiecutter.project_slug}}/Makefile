@@ -63,7 +63,7 @@ docs:
 	@echo "$(BOLD)Generating API reference...$(RESET)"
 	@rm -f docs/{{ cookiecutter.project_slug }}.rst
 	@rm -f docs/modules.rst
-	@$(VIRTUAL_ENV)/bin/sphinx-apidoc -o docs/ -H "API Reference" {{ cookiecutter.project_slug }}
+	@$(VIRTUAL_ENV)/bin/sphinx-apidoc -o docs/ -H "API reference" {{ cookiecutter.project_slug }}
 	@echo "$(BOLD)Building HTML documentation...$(RESET)"
 	@$(MAKE) -C docs clean
 	@$(MAKE) -C docs html
