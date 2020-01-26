@@ -7,12 +7,7 @@ ipdb
 # Code style
 black
 isort
-
-# Linting
-flake8
-flake8-bugbear
-flake8-logging-format
-pydocstyle
+wemake-python-styleguide
 
 # Type checking
 mypy
