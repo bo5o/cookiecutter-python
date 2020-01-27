@@ -8,6 +8,7 @@ ipdb
 black
 isort
 wemake-python-styleguide
+pylint
 
 # Type checking
 mypy
