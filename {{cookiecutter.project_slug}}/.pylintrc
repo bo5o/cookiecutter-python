@@ -67,21 +67,306 @@ disable=all
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
 enable=
-    # async,
-    # basic,
-    # classes,
-    # design,
-    # exceptions,
+    ### ASYNC ###
+    # not-async-context-manager            # E1701
+    # yield-inside-async-function          # E1700
+
+    ### BASIC ###
+    # blacklisted-name                     # C0102
+    # invalid-name                         # C0103
+    # empty-docstring                      # C0112
+    # missing-module-docstring             # C0114
+    # missing-class-docstring              # C0115
+    # missing-function-docstring           # C0116
+    # singleton-comparison                 # C0121
+    # misplaced-comparison-constant        # C0122
+    # unidiomatic-typecheck                # C0123
+    # init-is-generator                    # E0100
+    # return-in-init                       # E0101
+    # function-redefined                   # E0102
+    # not-in-loop                          # E0103
+    # return-outside-function              # E0104
+    # yield-outside-function               # E0105
+    # return-arg-in-generator              # E0106
+    # nonexistent-operator                 # E0107
+    # duplicate-argument-name              # E0108
+    # abstract-class-instantiated          # E0110
+    # bad-reversed-sequence                # E0111
+    # too-many-star-expressions            # E0112
+    # invalid-star-assignment-target       # E0113
+    # star-needs-assignment-target         # E0114
+    # nonlocal-and-global                  # E0115
+    # continue-in-finally                  # E0116
+    # nonlocal-without-binding             # E0117
+    # used-prior-global-declaration        # E0118
+    # misplaced-format-function            # E0119
+    # literal-comparison                   # R0123
+    # comparison-with-itself               # R0124
+    # unreachable                          # W0101
+    # dangerous-default-value              # W0102
+    # pointless-statement                  # W0104
+    # pointless-string-statement           # W0105
+    # expression-not-assigned              # W0106
+    # unnecessary-pass                     # W0107
+    # unnecessary-lambda                   # W0108
+    # duplicate-key                        # W0109
+    # assign-to-new-keyword                # W0111
+    # useless-else-on-loop                 # W0120
+    # exec-used                            # W0122
+    # eval-used                            # W0123
+    # confusing-with-statement             # W0124
+    # using-constant-test                  # W0125
+    # missing-parentheses-for-call-in-test # W0126
+    # self-assigning-variable              # W0127
+    # redeclared-assigned-name             # W0128
+    # comparison-with-callable             # W0143
+    # lost-exception                       # W0150
+    # assert-on-tuple                      # W0199
+
+    ### CLASSES ###
+    # bad-classmethod-argument,            # C0202
+    # bad-mcs-method-argument,             # C0203
+    # bad-mcs-classmethod-argument,        # C0204
+    # single-string-used-for-slots,        # C0205
+    # method-hidden,                       # E0202
+    # access-member-before-definition,     # E0203
+    # no-method-argument,                  # E0211
+    # no-self-argument,                    # E0213
+    # invalid-slots-object,                # E0236
+    # assigning-non-slot,                  # E0237
+    # invalid-slots,                       # E0238
+    # inherit-non-class,                   # E0239
+    # inconsistent-mro,                    # E0240
+    # duplicate-bases,                     # E0241
+    # class-variable-slots-conflict,       # E0242
+    # non-iterator-returned,               # E0301
+    # unexpected-special-method-signature, # E0302
+    # invalid-length-returned,             # E0303
+    # method-check-failed,                 # F0202
+    # no-self-use,                         # R0201
+    # no-classmethod-decorator,            # R0202
+    # no-staticmethod-decorator,           # R0203
+    # useless-object-inheritance,          # R0205
+    # property-with-parameters,            # R0206
+    # attribute-defined-outside-init,      # W0201
+    # bad-staticmethod-argument,           # W0211
+    # protected-access,                    # W0212
+    # arguments-differ,                    # W0221
+    # signature-differs,                   # W0222
+    # abstract-method,                     # W0223
+    # super-init-not-called,               # W0231
+    # no-init,                             # W0232
+    # non-parent-init-called,              # W0233
+    # useless-super-delegation,            # W0235
+    # invalid-overridden-method,           # W0236
+
+    ### DESIGN ###
+    # too-many-ancestors                   # R0901
+    # too-many-instance-attributes         # R0902
+    # too-few-public-methods               # R0903
+    # too-many-public-methods              # R0904
+    # too-many-return-statements           # R0911
+    # too-many-branches                    # R0912
+    # too-many-arguments                   # R0913
+    # too-many-locals                      # R0914
+    # too-many-statements                  # R0915
+    # too-many-boolean-expressions         # R0916
+
+    ### EXCEPTIONS ###
+    # bad-except-order                     # E0701
+    # raising-bad-type                     # E0702
+    # bad-exception-context                # E0703
+    # misplaced-bare-raise                 # E0704
+    # raising-non-exception                # E0710
+    # notimplemented-raised                # E0711
+    # catching-non-exception               # E0712
+    # bare-except                          # W0702
+    # broad-except                         # W0703
+    # duplicate-except                     # W0705
+    # try-except-raise                     # W0706
+    # binary-op-exception                  # W0711
+    # raising-format-tuple                 # W0715
+    # wrong-exception-operation            # W0716
+
+    ### METRICS ###
     # metrics,
-    # miscellaneous,
-    # newstyle,
-    # python3,
-    # refactoring,
-    # similarities,
-    # spelling,
-    # stdlib,
-    # string,
-    # variables
+
+    ### MISCELLANEOUS ###
+    # use-symbolic-message-instead         # I0023
+    # fixme                                # W0511
+
+    ### NEWSTYLE ###
+    # bad-super-call                       # E1003
+
+    ### PYTHON3 ###
+    # print-statement                      # E1601
+    # parameter-unpacking                  # E1602
+    # unpacking-in-except                  # E1603
+    # old-raise-syntax                     # E1604
+    # backtick                             # E1605
+    # long-suffix                          # E1606
+    # old-ne-operator                      # E1607
+    # old-octal-literal                    # E1608
+    # import-star-module-level             # E1609
+    # non-ascii-bytes-literal              # E1610
+    # apply-builtin                        # W1601
+    # basestring-builtin                   # W1602
+    # buffer-builtin                       # W1603
+    # cmp-builtin                          # W1604
+    # coerce-builtin                       # W1605
+    # execfile-builtin                     # W1606
+    # file-builtin                         # W1607
+    # long-builtin                         # W1608
+    # raw_input-builtin                    # W1609
+    # reduce-builtin                       # W1610
+    # standarderror-builtin                # W1611
+    # unicode-builtin                      # W1612
+    # xrange-builtin                       # W1613
+    # coerce-method                        # W1614
+    # delslice-method                      # W1615
+    # getslice-method                      # W1616
+    # setslice-method                      # W1617
+    # no-absolute-import                   # W1618
+    # old-division                         # W1619
+    # dict-iter-method                     # W1620
+    # dict-view-method                     # W1621
+    # next-method-called                   # W1622
+    # metaclass-assignment                 # W1623
+    # indexing-exception                   # W1624
+    # raising-string                       # W1625
+    # reload-builtin                       # W1626
+    # oct-method                           # W1627
+    # hex-method                           # W1628
+    # nonzero-method                       # W1629
+    # cmp-method                           # W1630
+    # input-builtin                        # W1632
+    # round-builtin                        # W1633
+    # intern-builtin                       # W1634
+    # unichr-builtin                       # W1635
+    # map-builtin-not-iterating            # W1636
+    # zip-builtin-not-iterating            # W1637
+    # range-builtin-not-iterating          # W1638
+    # filter-builtin-not-iterating         # W1639
+    # using-cmp-argument                   # W1640
+    # eq-without-hash                      # W1641
+    # div-method                           # W1642
+    # idiv-method                          # W1643
+    # rdiv-method                          # W1644
+    # exception-message-attribute          # W1645
+    # invalid-str-codec                    # W1646
+    # sys-max-int                          # W1647
+    # bad-python3-import                   # W1648
+    # deprecated-string-function           # W1649
+    # deprecated-str-translate-call        # W1650
+    # deprecated-itertools-function        # W1651
+    # deprecated-types-field               # W1652
+    # next-method-defined                  # W1653
+    # dict-items-not-iterating             # W1654
+    # dict-keys-not-iterating              # W1655
+    # dict-values-not-iterating            # W1656
+    # deprecated-operator-function         # W1657
+    # deprecated-urllib-function           # W1658
+    # xreadlines-attribute                 # W1659
+    # deprecated-sys-function              # W1660
+    # exception-escape                     # W1661
+    # comprehension-escape                 # W1662
+
+    ### REFACTORING ###
+    # unneeded-not                         # C0113
+    # consider-using-enumerate             # C0200
+    # consider-iterating-dictionary        # C0201
+    # len-as-condition                     # C1801
+    # consider-merging-isinstance          # R1701
+    # too-many-nested-blocks               # R1702
+    # simplifiable-if-statement            # R1703
+    # redefined-argument-from-local        # R1704
+    # no-else-return                       # R1705
+    # consider-using-ternary               # R1706
+    # trailing-comma-tuple                 # R1707
+    # stop-iteration-return                # R1708
+    # simplify-boolean-expression          # R1709
+    # inconsistent-return-statements       # R1710
+    # useless-return                       # R1711
+    # consider-swap-variables              # R1712
+    # consider-using-join                  # R1713
+    # consider-using-in                    # R1714
+    # consider-using-get                   # R1715
+    # chained-comparison                   # R1716
+    # consider-using-dict-comprehension    # R1717
+    # consider-using-set-comprehension     # R1718
+    # simplifiable-if-expression           # R1719
+    # no-else-raise                        # R1720
+    # unnecessary-comprehension            # R1721
+    # consider-using-sys-exit              # R1722
+    # no-else-break                        # R1723
+    # no-else-continue                     # R1724
+
+    ### SIMILARITIES ###
+    # duplicate-code                       # R0801
+
+    ### SPELLING ###
+    # wrong-spelling-in-comment            # C0401
+    # wrong-spelling-in-docstring          # C0402
+    # invalid-characters-in-docstring      # C0403
+
+    ### STDLIB ###
+    # invalid-envvar-value                 # E1507
+    # bad-open-mode                        # W1501
+    # boolean-datetime                     # W1502
+    # redundant-unittest-assert            # W1503
+    # deprecated-method                    # W1505
+    # bad-thread-instantiation             # W1506
+    # shallow-copy-environ                 # W1507
+    # invalid-envvar-default               # W1508
+    # subprocess-popen-preexec-fn          # W1509
+    # subprocess-run-check                 # W1510
+
+    ### STRING ###
+    # bad-format-character                 # E1300
+    # truncated-format-string              # E1301
+    # mixed-format-string                  # E1302
+    # format-needs-mapping                 # E1303
+    # missing-format-string-key            # E1304
+    # too-many-format-args                 # E1305
+    # too-few-format-args                  # E1306
+    # bad-string-format-type               # E1307
+    # bad-str-strip-call                   # E1310
+    # bad-format-string-key                # W1300
+    # unused-format-string-key             # W1301
+    # bad-format-string                    # W1302
+    # missing-format-argument-key          # W1303
+    # unused-format-string-argument        # W1304
+    # format-combined-specification        # W1305
+    # missing-format-attribute             # W1306
+    # invalid-format-index                 # W1307
+    # duplicate-string-formatting-argument # W1308
+    # anomalous-backslash-in-string        # W1401
+    # anomalous-unicode-escape-in-string   # W1402
+    # implicit-str-concat-in-sequence      # W1403
+
+    ### VARIABLES ###
+    # used-before-assignment               # E0601
+    # undefined-variable                   # E0602
+    # undefined-all-variable               # E0603
+    # invalid-all-object                   # E0604
+    # no-name-in-module                    # E0611
+    # unpacking-non-sequence               # E0633
+    # global-variable-undefined            # W0601
+    # global-variable-not-assigned         # W0602
+    # global-statement                     # W0603
+    # global-at-module-level               # W0604
+    # unused-import                        # W0611
+    # unused-variable                      # W0612
+    # unused-argument                      # W0613
+    # unused-wildcard-import               # W0614
+    # redefined-outer-name                 # W0621
+    # redefined-builtin                    # W0622
+    # redefine-in-handler                  # W0623
+    # undefined-loop-variable              # W0631
+    # unbalanced-tuple-unpacking           # W0632
+    # cell-var-from-loop                   # W0640
+    # possibly-unused-variable             # W0641
+    # self-cls-assignment                  # W0642
 
 
 [REPORTS]
