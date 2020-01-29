@@ -189,12 +189,12 @@ enable=
     # wrong-exception-operation,             # W0716
 
     ### LOGGING ###
-    # logging-unsupported-format             # E1200
-    # logging-format-truncated               # E1201
-    # logging-too-many-args                  # E1205
-    # logging-too-few-args                   # E1206
-    # logging-not-lazy                       # W1201
-    # logging-format-interpolation           # W1202
+    # logging-unsupported-format,            # E1200
+    # logging-format-truncated,              # E1201
+    # logging-too-many-args,                 # E1205
+    # logging-too-few-args,                  # E1206
+    # logging-not-lazy,                      # W1201
+    # logging-format-interpolation,          # W1202
 
     ### METRICS ###
     # metrics,
