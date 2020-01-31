@@ -7,6 +7,7 @@ ipdb
 # Code style
 black
 isort
+seed-isort-config
 wemake-python-styleguide
 pylint
 
